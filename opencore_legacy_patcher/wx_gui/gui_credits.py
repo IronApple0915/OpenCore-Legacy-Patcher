@@ -39,7 +39,7 @@ class CreditsFrame(wx.Frame):
         title_label.SetFont(gui_support.font_factory(19, wx.FONTWEIGHT_BOLD))
         title_label.Centre(wx.HORIZONTAL)
 
-        text_label = wx.StaticText(frame, label="These Amazing People Made OCLP:", pos=(-1,30))
+        text_label = wx.StaticText(frame, label="OCLP has been made possible by these amazing people:", pos=(-1,30))
         text_label.SetFont(gui_support.font_factory(13, wx.FONTWEIGHT_NORMAL))
         text_label.Centre(wx.HORIZONTAL)
 
