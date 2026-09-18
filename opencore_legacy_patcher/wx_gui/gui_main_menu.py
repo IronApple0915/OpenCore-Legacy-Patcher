@@ -28,6 +28,7 @@ from ..wx_gui import (
     gui_support,
     gui_help,
     gui_settings,
+    gui_credits,
     gui_sys_patch_display,
     gui_update,
 )
@@ -68,6 +69,7 @@ class MainFrame(wx.Frame):
             - Post-Install Root Patch
             - Create macOS Installer
             - Settings
+            - Credits
             - Help
           - Text:        Copyright
         """
@@ -78,8 +80,7 @@ class MainFrame(wx.Frame):
         title_label.Centre(wx.HORIZONTAL)
 
         # Text: Model: {Build or Host Model}
-        model_label = wx.StaticText(self, label=f"Model: {self.constants.custom_model or self.constants.computer.real_model}", pos=(-1, title_label.GetPosition()[1] + 25
-                                                                                                                                    ))
+        model_label = wx.StaticText(self, label=f"Model: {self.constants.custom_model or self.constants.computer.real_model}", pos=(-1, title_label.GetPosition()[1] + 25))
         model_label.SetFont(gui_support.font_factory(13, wx.FONTWEIGHT_NORMAL))
         model_label.Centre(wx.HORIZONTAL)
         self.model_label = model_label
@@ -105,6 +106,11 @@ class MainFrame(wx.Frame):
             },
             "⚙️ Settings": {
                 "function": self.on_settings,
+                "description": [
+                ],
+            },
+            "Credits": {
+                "function": self.on_credits,
                 "description": [
                 ],
             },
@@ -134,17 +140,19 @@ class MainFrame(wx.Frame):
             rollover = int(rollover) + 1
         index = 0
         max_height = 0
+        settings_button = None
+        credits_button = None
         for button_name, button_function in menu_buttons.items():
             # place icon
             if "icon" in button_function:
                 icon = wx.StaticBitmap(self, bitmap=wx.Bitmap(button_function["icon"], wx.BITMAP_TYPE_ICON), pos=(button_x - 10, button_y), size=(64, 64))
                 if button_name == "Post-Install Root Patch":
-                    icon.SetPosition((-1, button_y + 7))
+                    icon.SetPosition((-1, button_y ))
                 if button_name == "Create macOS Installer":
                     icon.SetPosition((button_x - 5, button_y + 3))
                 if button_name == "Support":
                     # icon_mac.SetSize((80, 80))
-                    icon.SetPosition((button_x - 7, button_y + 3))
+                    icon.SetPosition((button_x - 7, button_y ))
                 if button_name == "Build and Install OpenCore":
                     icon.SetSize((70, 70))
             if button_name == "⚙️ Settings":
@@ -177,16 +185,23 @@ class MainFrame(wx.Frame):
             elif button_name == "Post-Install Root Patch":
                 if self.constants.detected_os < os_data.os_data.big_sur:
                     button.Disable()
-            elif button_name == "⚙️ Settings":
+            elif button_name in ("⚙️ Settings", "Credits"):
                 button.SetSize((100, -1))
-                button.Centre(wx.HORIZONTAL)
                 description_label.Centre(wx.HORIZONTAL)
+                if button_name == "⚙️ Settings":
+                    settings_button = button
+                elif button_name == "Credits":
+                    credits_button = button
 
             index += 1
             if index == rollover:
                 max_height = button_y
                 button_x = 320
-                button_y = model_label.GetPosition()[1] + 30
+                button_y = model_label.GetPosition()[1] - 25
+        if settings_button and credits_button:
+            bottom_button_y = max_height - 60
+            settings_button.SetPosition((150, bottom_button_y))
+            credits_button.SetPosition((350, bottom_button_y))
 
 
         # Text: Copyright
@@ -297,6 +312,14 @@ class MainFrame(wx.Frame):
 
     def on_settings(self, event: wx.Event = None):
         gui_settings.SettingsFrame(
+            parent=self,
+            title=self.title,
+            global_constants=self.constants,
+            screen_location=self.GetPosition()
+        )
+
+    def on_credits(self, event: wx.Event = None):
+        gui_credits.CreditsFrame(
             parent=self,
             title=self.title,
             global_constants=self.constants,
