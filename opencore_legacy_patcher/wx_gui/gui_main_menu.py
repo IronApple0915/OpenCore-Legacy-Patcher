@@ -109,7 +109,7 @@ class MainFrame(wx.Frame):
                 "description": [
                 ],
             },
-            "Credits": {
+            "❤️ Credits": {
                 "function": self.on_credits,
                 "description": [
                 ],
@@ -158,6 +158,7 @@ class MainFrame(wx.Frame):
             if button_name == "⚙️ Settings":
                 button_y += 5
 
+
             button = wx.Button(self, label=button_name, pos=(button_x + 70, button_y), size=(180, 30))
             button.SetFont(gui_support.font_factory(13, wx.FONTWEIGHT_NORMAL))
             button.Bind(wx.EVT_BUTTON, lambda event, function=button_function["function"]: function(event))
@@ -185,12 +186,12 @@ class MainFrame(wx.Frame):
             elif button_name == "Post-Install Root Patch":
                 if self.constants.detected_os < os_data.os_data.big_sur:
                     button.Disable()
-            elif button_name in ("⚙️ Settings", "Credits"):
+            elif button_name in ("⚙️ Settings", "❤️ Credits"):
                 button.SetSize((100, -1))
                 description_label.Centre(wx.HORIZONTAL)
                 if button_name == "⚙️ Settings":
                     settings_button = button
-                elif button_name == "Credits":
+                elif button_name == "❤️ Credits":
                     credits_button = button
 
             index += 1
