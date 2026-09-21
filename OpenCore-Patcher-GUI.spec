@@ -20,6 +20,7 @@ block_cipher = None
 datas = [
    ('payloads.dmg', '.'),
    ('Universal-Binaries.dmg', '.'),
+   ('payloads/Icon/Profiles/*.png','.'),
 ]
 
 if Path("DortaniaInternalResources.dmg").exists():

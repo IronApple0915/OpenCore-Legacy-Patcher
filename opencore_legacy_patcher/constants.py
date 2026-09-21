@@ -753,7 +753,7 @@ class Constants:
     def icns_profiles_path(self):
         if self.launcher_script:
             return self.payload_path / Path("Icon/Profiles")
-        return Path(self.launcher_binary).parent.parent / Path("Profiles")
+        return Path(self.launcher_binary).parent.parent / Path("Resources")
 
     @property
     def app_icon_path(self):
