@@ -749,7 +749,6 @@ class Constants:
             return self.payload_path / Path("Icon/AppIcons")
         return Path(self.launcher_binary).parent.parent / Path("Resources")
 
-
     @property
     def app_icon_path(self):
         return self.payload_path / Path("Icon/AppIcons/OC-Patcher.icns")
