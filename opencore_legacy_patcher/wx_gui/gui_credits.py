@@ -418,26 +418,39 @@ class CreditsFrame(wx.Frame):
                 else:
                     circle.SetAlpha(x, y, 0)
 
-        # Put the circular image into bitmap
-        bitmap = wx.Bitmap(width, height)
-        dc = wx.MemoryDC(bitmap)
-        dc.Clear()
+        # Create the final bitmap as a transparent image.
+        output = wx.Image(width, height, True)
+        output.InitAlpha()
+        for y in range(height):
+            for x in range(width):
+                output.SetRGB(x, y, 0, 0, 0)
+                output.SetAlpha(x, y, 0)
 
-        circle_bitmap = wx.Bitmap(circle)
+        x_offset = (width - diameter) // 2
+        y_offset = (height - diameter) // 2
 
-        x = (width - diameter) // 2
-        y = (height - diameter) // 2
+        # Copy the circular image onto the transparent output image.
+        for y in range(diameter):
+            for x in range(diameter):
+                alpha = circle.GetAlpha(x, y)
 
-        dc.DrawBitmap(
-            circle_bitmap,
-            x,
-            y,
-            True
-        )
+                if alpha == 0:
+                    continue
 
-        dc.SelectObject(wx.NullBitmap)
+                output.SetRGB(
+                    x + x_offset,
+                    y + y_offset,
+                    circle.GetRed(x, y),
+                    circle.GetGreen(x, y),
+                    circle.GetBlue(x, y)
+                )
+                output.SetAlpha(
+                    x + x_offset,
+                    y + y_offset,
+                    alpha
+                )
 
-        return bitmap
+        return wx.Bitmap(output)
 
     def _position_cards(self):
         visible_width = (
