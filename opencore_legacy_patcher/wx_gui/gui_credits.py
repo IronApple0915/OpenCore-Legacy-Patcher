@@ -58,174 +58,174 @@ class CreditsFrame(wx.Frame):
             {
                 "name": "Mykola Grymalyuk",
                 "link": "https://github.com/Khronokernel",
-                "profile_picture": "payloads/Icon/Profiles/mykola_grymalyuk.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "mykola_grymalyuk.png"),
                 "contribution": "Main co-author"
             },
             {
                 "name": "Dhinak G",
                 "link": "https://github.com/DhinakG",
-                "profile_picture": "payloads/Icon/Profiles/dhinakg.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "dhinakg.png"),
                 "contribution": "Main co-author"
             },
             {
                 "name": "Vit9696",
                 "link": "https://github.com/vit9696",
-                "profile_picture": "payloads/Icon/Profiles/vit9696.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "vit9696.png"),
                 "contribution": "Endless amount of help troubleshooting, determining fixes and writing patches"
             },
             {
                 "name": "Dosdude1",
                 "link": "https://github.com/dosdude1",
-                "profile_picture": "payloads/Icon/Profiles/dosdude1.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "dosdude1.png"),
                 "contribution": "Main author of the original GUI, Development of previous patchers, laying out much of what needs to be patched"
             },
             {
                 "name": "Acidanthera",
                 "link": "https://github.com/Acidanthera",
-                "profile_picture": "payloads/Icon/Profiles/acidanthera.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "acidanthera.png"),
                 "contribution": "OpenCorePkg, as well as many of the core kexts and tools"
             },
             {
                 "name": "Asentientbot",
                 "link": "https://github.com/ASentientBot",
-                "profile_picture": "payloads/Icon/Profiles/asentientbot.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "asentientbot.png"),
                 "contribution": "non-Metal patch set, Metal bundle interposer, dsce"
             },
             {
                 "name": "EduCovas",
                 "link": "",
-                "profile_picture": "payloads/Icon/Profiles/educovas.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "educovas.png"),
                 "contribution": "non-Metal patch set, 3802 Metal patch set, MetallibSupportPkg, IOSurface offset patches, legacy Wi-Fi patch set, T1 patch set, AppleGVA downgrade, USB 1 patches"
             },
             {
                 "name": "ASentientHedgehog",
                 "link": "https://github.com/moosethegoose2213",
-                "profile_picture": "payloads/Icon/Profiles/asentienthedgehog.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "asentienthedgehog.png"),
                 "contribution": "non-Metal patch set"
             },
             {
                 "name": "Flagers",
                 "link": "https://github.com/flagersgit",
-                "profile_picture": "payloads/Icon/Profiles/flagers.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "flagers.png"),
                 "contribution": "non-Metal patch set, Metal bundle interposer, Nvidia's WebDriver Development"
             },
             {
                 "name": "Ausdauersportler",
                 "link": "https://github.com/Ausdauersportler",
-                "profile_picture": "payloads/Icon/Profiles/ausdauersportler.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "ausdauersportler.png"),
                 "contribution": "iMacs Metal GPUs Upgrade Patch set and documentation"
             },
             {
                 "name": "Jazzzny",
                 "link": "https://github.com/Jazzzny",
-                "profile_picture": "payloads/Icon/Profiles/jazzzny.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "jazzzny.png"),
                 "contribution": "UEFI Legacy XHCI, NVIDIA OpenCL, LegacyKeyboardInjector, Pre-Ivy Bridge Aquantia Ethernet Patch, Non-Metal Photo Booth, GUI and Backend Development, Vaulting implementation"
             },
             {
                 "name": "Crystall1nedev",
                 "link": "https://enclave.fruitycord.org/crystll1ne",
-                "profile_picture": "payloads/Icon/Profiles/crystall1nedev.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "crystall1nedev.png"),
                 "contribution": "Dirty Root Volume checks & Many, Many, Many hours of testing. "
             },
             {
                 "name": "ThatStella7922",
                 "link": "https://github.com/ThatStella7922",
-                "profile_picture": "payloads/Icon/Profiles/thatstella7922.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "thatstella7922.png"),
                 "contribution": "Donated Hardware: 2017 13 inch MacBook Pro (A1708)"
             },
             {
                 "name": "IronApple",
                 "link": "https://github.com/IronApple0915",
-                "profile_picture": "payloads/Icon/Profiles/ironapple.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "ironapple.png"),
                 "contribution": "Many, Many, Many hours of testing."
             },
             {
                 "name": "socamx",
                 "link": "https://github.com/socamx",
-                "profile_picture": "payloads/Icon/Profiles/socamx.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "socamx.png"),
                 "contribution": "Hello, dumbass."
             },
             {
                 "name": "Paradox94",
                 "link": "https://github.com/ParaDoX1994",
-                "profile_picture": "payloads/Icon/Profiles/paradox94.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "paradox94.png"),
                 "contribution": "Guide rewrite, Many, Many, Many hours of testing."
             },
             {
                 "name": "Mr.Macintosh",
                 "link": "https://mrmacintosh.com/",
-                "profile_picture": "payloads/Icon/Profiles/mrmacintosh.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "mrmacintosh.png"),
                 "contribution": "Endless hours helping architect and troubleshoot many portions of the project"
             },
             {
                 "name": "Mario_bros_tech",
                 "link": "https://github.com/mariobrostech",
-                "profile_picture": "payloads/Icon/Profiles/mario_bros_tech.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "mario_bros_tech.png"),
                 "contribution": "Unsupported Macs Discord: The Catalyst that started OpenCore Legacy Patcher"
             },
             {
                 "name": "Cdf",
                 "link": "https://github.com/cdf",
-                "profile_picture": "payloads/Icon/Profiles/cdf.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "cdf.png"),
                 "contribution": "Mac Pro on OpenCore Patch set and documentation, Innie and NightShiftEnabler"
             },
             {
                 "name": "Syncretic",
                 "link": "https://forums.macrumors.com/members/syncretic.1173816/",
-                "profile_picture": "payloads/Icon/Profiles/syncretic.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "syncretic.png"),
                 "contribution": "AAAMouSSE, telemetrap and SurPlus"
             },
             {
                 "name": "Parrotgeek1",
                 "link": "https://github.com/parrotgeek1",
-                "profile_picture": "payloads/Icon/Profiles/parrotgeek1.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "parrotgeek1.png"),
                 "contribution": "VMM Patch Set"
             },
             {
                 "name": "BarryKN",
                 "link": "https://github.com/BarryKN",
-                "profile_picture": "payloads/Icon/Profiles/barrykn.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "barrykn.png"),
                 "contribution": "Development of previous patchers, laying out much of what needs to be patched"
             },
             {
                 "name": "Arter97",
                 "link": "https://github.com/arter97",
-                "profile_picture": "payloads/Icon/Profiles/arter97.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "arter97.png"),
                 "contribution": "SimpleMSR to disable firmware throttling in Nehalem+ MacBooks without batteries"
             },
             {
                 "name": "Joevt",
                 "link": "https://github.com/joevt",
-                "profile_picture": "payloads/Icon/Profiles/joevt.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "joevt.png"),
                 "contribution": "FixPCIeLinkrate"
             },
             {
                 "name": "JohnD",
                 "link": "https://forums.macrumors.com/members/johnd.53633/",
-                "profile_picture": "payloads/Icon/Profiles/JohnD.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "JohnD.png"),
                 "contribution": "Donated Hardware: 2013 Mac Pro"
             },
             {
                 "name": "SpiGAndromeda",
                 "link": "https://github.com/SpiGAndromeda",
-                "profile_picture": "payloads/Icon/Profiles/SpiGAndromeda.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "SpiGAndromeda.png"),
                 "contribution": "Donated Hardware: AMD Vega 64"
             },
             {
                 "name": "turbomacs",
                 "link": "https://github.com/turbomacs",
-                "profile_picture": "payloads/Icon/Profiles/turbomacs.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "turbomacs.png"),
                 "contribution": "Donated Hardware: 2014 5k iMac"
             },{
                 "name": "vinaypundith",
                 "link": "https://forums.macrumors.com/members/vinaypundith.1212357/",
-                "profile_picture": "payloads/Icon/Profiles/vinaypundith.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "vinaypundith.png"),
                 "contribution": "Donated Hardware: Macbook 7,1"
             },
             {
                 "name": "Apple",
                 "link": "https://www.apple.com",
-                "profile_picture": "payloads/Icon/Profiles/apple.png",
+                "profile_picture": str(self.constants.icns_profiles_path / "apple.png"),
                 "contribution": "MacOS and The Mac Hardware"
             }
         ]
