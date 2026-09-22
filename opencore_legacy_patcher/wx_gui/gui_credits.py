@@ -125,7 +125,7 @@ class CreditsFrame(wx.Frame):
                 "name": "Crystall1nedev",
                 "link": "https://enclave.fruitycord.org/crystll1ne",
                 "profile_picture": str(self.constants.icns_profiles_path / "crystall1nedev.png"),
-                "contribution": "Dirty Root Volume checks & Many, Many, Many hours of testing. "
+                "contribution": "Dirty Root Volume checks, and Many, Many, Many hours of testing. "
             },
             {
                 "name": "ThatStella7922",
@@ -149,7 +149,7 @@ class CreditsFrame(wx.Frame):
                 "name": "Paradox94",
                 "link": "https://github.com/ParaDoX1994",
                 "profile_picture": str(self.constants.icns_profiles_path / "paradox94.png"),
-                "contribution": "Guide rewrite, Many, Many, Many hours of testing."
+                "contribution": "Guide rewrite, and Many, Many, Many hours of testing."
             },
             {
                 "name": "Mr.Macintosh",
